@@ -15,7 +15,6 @@ class ExactMatcher(BaseMatcher):
 
         wanted_version = [t[0] for t in version_pairs]
         for wanted, actual in version_pairs:
-            # print(wanted, actual)
             if wanted is not None and int(wanted) != actual:
                 mapped_version_string = '.'.join('x' if m is None else m for m in wanted_version)
                 return WrongVersion(mapped_version_string)

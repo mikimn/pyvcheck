@@ -15,7 +15,6 @@ class UnaryMatcher(BaseMatcher):
 
         wanted_version = [t[0] for t in version_pairs]
         for wanted, actual in version_pairs:
-            print(wanted, actual)
             if wanted is not None and self._comp(actual, int(wanted)) == False:
                 mapped_version_string = '.'.join('x' if m is None else m for m in wanted_version)
                 return WrongVersion('at most {}'.format(mapped_version_string))

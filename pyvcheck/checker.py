@@ -18,7 +18,6 @@ def version(version_string):
                 result = matcher.match_version(version_string)
 
                 if isinstance(result, WrongVersion):
-                    print('MATCHER: {}'.format(matcher.regex))
                     result.raise_exception()
                 elif isinstance(result, OkVersion):
                     return func(*args, **kwargs)
