@@ -59,8 +59,8 @@ if os.environ.get('READTHEDOCS', None):
     extras_require['reST'].append('recommonmark')
 
 setup(name='py-vcheck',
-      version='0.1.0',
-      description='##### ToDo: Rewrite me #####',
+      version='0.0.2',
+      description='Enforce strict python versions in your code',
       long_description=long_description,
       long_description_content_type='text/markdown',
       author='Miki Mendelson',
